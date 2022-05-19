@@ -1,0 +1,250 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins';
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.first-container {
+    background-image: url('../images/background_image.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.first-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.65;
+    background: linear-gradient(90deg, #3b3b3b, #89d8ff9d);
+    z-index: 1;
+    mix-blend-mode: unset;
+}
+
+.my-navbar {
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    opacity: .75;
+}
+
+.my-navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.my-navbar ul li {
+    float: right;
+}
+
+.my-navbar ul li a {
+    display: block;
+    color: white !important;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.my-navbar ul li a:hover {
+    background-color: #111;
+}
+
+.first-container h3 {
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    font-size: 1.75rem;
+    color: white;
+    z-index: 1;
+    font-weight: 300;
+    display: none;
+}
+
+.floating-container {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    bottom: 0;
+    right: 0;
+    margin: 35px 25px;
+    z-index: 1;
+}
+
+.floating-container:hover {
+    height: 300px;
+}
+
+.floating-container:hover .floating-button {
+    box-shadow: 0 10px 25px rgba(44, 179, 240, 0.6);
+    transform: translatey(5px);
+    transition: all 0.3s;
+}
+
+.floating-container .floating-button {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    background: #151418;
+    bottom: 0;
+    border-radius: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: white;
+    line-height: 65px;
+    text-align: center;
+    font-size: 23px;
+    z-index: 100;
+    box-shadow: 0 10px 25px -5px rgba(44, 179, 240, 0.6);
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.box {
+    position: fixed;
+    top: 20%;
+    right: 5%;
+    width: 18rem;
+    display: none;
+    height: 25rem;
+    padding: 2.5rem;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 0.625rem;
+    z-index: 3;
+}
+
+.dropzone {
+    padding: 0px 20px !important;
+}
+
+.box h4 {
+    margin: 0 0 1.875rem;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-weight: 300;
+    font-size: 21px;
+    letter-spacing: 3px;
+}
+
+.box button[type="submit"] {
+    position: fixed;
+    bottom: 0.3rem;
+    left: 2.5rem;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #010202;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 0.312rem;
+    font-size: 1rem;
+    transition: 0.5s;
+}
+
+.box button[type="submit"]:hover {
+    background-color: #fff;
+    color: #010202;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    z-index: 3;
+    overflow-y: auto;
+    margin-top: 2rem;
+    height: 99%;
+    direction: rtl;
+}
+
+.outter-container {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    z-index: 3;
+    margin-top: 2rem;
+    height: 90%;
+}
+
+.container .card {
+    z-index: 3;
+    position: relative;
+    width: 200px;
+    height: 300px;
+    margin: 30px;
+    box-shadow: 20px 20px 30px rgba(148, 187, 224, 0.541);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.container .card .content {
+    padding: 20px;
+    text-align: end;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.container .card img {
+    height: 200px;
+    width: 200px;
+}
+
+.container .card:hover .content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.container .card .content h2 {
+    font-size: 0.8em;
+    color: rgb(175, 169, 169);
+    z-index: 1;
+}
+
+.container .card .content p {
+    font-size: 0.8em;
+    color: rgb(20, 239, 255);
+    opacity: .7;
+    font-weight: 600;
+    cursor: none;
+}
+
+.container .card .content a {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 7px;
+    background: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 20px;
+    color: #000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}

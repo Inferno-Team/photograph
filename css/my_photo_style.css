@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins';
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.first-container {
+    background-image: url('../images/background_image.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.first-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.65;
+    background: linear-gradient(90deg, #3b3b3b, #89d8ff9d);
+    /* z-index: 1; */
+    mix-blend-mode: hue;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    opacity: .75;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar ul li {
+    float: right;
+}
+
+.navbar ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    background-color: #111;
+}
+
+.honeycomb {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0;
+    transform: translateY(70px);
+}
+
+.honeycomb-cell {
+    flex: 0 1 250px;
+    max-width: 250px;
+    height: 137.5px;
+    margin: 65.4761904762px 12.5px 25px;
+    position: relative;
+    padding: 0.5em;
+    text-align: center;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.honeycomb .honeycomb-cell__title {
+    height: 100%;
+    /* width: 75%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    hyphens: auto;
+    word-break: break-word;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.25em;
+    transition: opacity 350ms;
+}
+
+.honeycomb .honeycomb-cell__image,
+.honeycomb-cell::after {
+    object-fit: cover;
+    object-position: center;
+    top: -50%;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    display: block;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    z-index: -1;
+    position: absolute;
+}
+
+.honeycomb-cell:hover .honeycomb-cell__title {
+    opacity: 0;
+}
+
+.honeycomb-cell::after {
+    content: '';
+    background: linear-gradient(-90deg, #3b3b3b, #89d8ff9d);
+    opacity: 0.5;
+    transition: opacity 350ms;
+}
+
+.honeycomb-cell::after {
+    box-sizing: border-box;
+}
+
+.honeycomb-cell:hover::after {
+    opacity: 0;
+}

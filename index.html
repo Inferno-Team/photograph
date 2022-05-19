@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="./css/animate.min.css" rel="stylesheet">
+    <link href="./css/index_style.css" rel="stylesheet">
+    <title>PhotoGraph</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a id="log-sign-opener" onclick="loginOpener()">Login</a></li>
+            <li><a href="#">Home</a></li>
+        </ul>
+    </div>
+
+    <div class="box animate__animated" id="login-form">
+        <h4 id="box-title">Log In</h4>
+        <form id="form" autocomplete="off">
+            <div class="inputBox">
+                <input id="email" type="text" required value="">
+                <label>Email</label>
+            </div>
+            <div class="inputBox">
+                <input id="password" type="password" required value="">
+                <label>Password</label>
+            </div>
+            <br>
+            <input type="button" onclick="login()" value="Login">
+            <h6>you don't have account yet ? </h6>
+            <h3 onclick="signUpButton()">Create</h3>
+        </form>
+        <form id="form-sign-up" autocomplete="off">
+            <div class="inputBox">
+                <input id="email-signup" type="text" required value="">
+                <label>Email</label>
+            </div>
+            <div class="inputBox">
+                <input id="phone-signup" type="text" required value="">
+                <label>Phone Number</label>
+            </div>
+            <div class="inputBox">
+                <input id="password-signup" type="password" required value="">
+                <label>Password</label>
+            </div>
+            <br>
+            <input id="button" type="button" onclick="login()" value="Login">
+            <h6 id="show_no_account">you don't have account yet ? </h6>
+            <h3 id="create_btn" onclick="signUpButton()">Create</h3>
+        </form>
+    </div>
+    <div class="first-container">
+        <div class="inner-container">
+            <p class="animate__animated animate__bounce">Welcome to<br>Photographing</p>
+            <a id="browse-button" onclick="moveToBrowse()">Browse</a>
+        </div>
+    </div>
+
+</body>
+<script src="./js/jquery-3.6.0.min.js"></script>
+<script src="./js/index_script.js"></script>
+
+</html>

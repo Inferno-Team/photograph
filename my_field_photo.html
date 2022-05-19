@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/animate.min.css">
+    <link rel="stylesheet" href="./css/dropzone.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/my_field_photo.css">
+    <title>Field Photos</title>
+</head>
+
+<body>
+    <div class="my-navbar">
+        <ul>
+            <li><a style="cursor: pointer;" id="logout" onclick="logout()">Logout</a></li>
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </div>
+    <div class="box animate__animated" id="upload-form">
+        <h4 id="box-title">Add New Image</h4>
+        <form style="background-color: transparent;" class="dropzone" id="upload-form">
+            <div style=" position: fixed;
+            bottom: 4rem;
+            left: 2rem;">
+                <label for="descField" style="color: white;">Photo Description</label>
+                <input class="form-control" id="descField" placeholder="Description" type="text" name="descField">
+            </div>
+            <button type="submit">Upload</button>
+        </form>
+
+    </div>
+    <div class="first-container">
+
+        <h3 id="no-images-msg" class="animate__animated animate__zoomInDown">
+            There Is No Images to you in this field</h3>
+        <div class="floating-container">
+            <div class="floating-button" onclick="showAddForm()">+</div>
+        </div>
+        <div class="outter-container">
+            <div class="container" id="container">
+
+            </div>
+        </div>
+    </div>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/dropzone.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/my_field_photo.js"></script>
+</body>
+
+</html>
